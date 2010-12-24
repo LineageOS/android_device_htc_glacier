@@ -12,8 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
 LOCAL_PATH:= $(call my-dir)
+
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),glacier)
+
 # HAL module implemenation, not prelinked and stored in
 # hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.board.platform>.so
 include $(CLEAR_VARS)
@@ -30,3 +32,5 @@ LOCAL_MODULE := lights.glacier
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif # TARGET_BOOTLOADER_BOARD_NAME
