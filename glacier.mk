@@ -74,7 +74,8 @@ PRODUCT_PACKAGES += \
     gps.glacier \
     libOmxCore \
     libOmxVenc \
-    libOmxVdec
+    libOmxVdec \
+    GanOptimizer
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
